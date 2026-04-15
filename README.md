@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains implementations of fundamental machine learning algorithms and concepts using Python and Jupyter Notebooks.
+This repository contains implementations of fundamental machine learning algorithms using Python and Jupyter Notebooks.
 
-Each notebook focuses on understanding the working of core ML techniques.
+It focuses on understanding core ML concepts through step-by-step implementation and experimentation on structured datasets.
 
 ---
 
@@ -12,20 +12,22 @@ Each notebook focuses on understanding the working of core ML techniques.
 
 I created this repository to:
 
-* Strengthen understanding of ML fundamentals
-* Implement algorithms from scratch or using scikit-learn
-* Visualize how models behave on data
+* Understand foundational machine learning algorithms
+* Implement concept learning and clustering techniques
+* Work with real structured datasets in ML workflows
 
 ---
 
 ## Project Structure
 
-```
+```plaintext id="structure1"
 machine-learning-fundamentals/
 │── notebooks/
 │     ├── candidate_elimination.ipynb
 │     ├── kmeans_clustering.ipynb
 │     ├── hierarchical_clustering.ipynb
+│── data/
+│     └── books_data-Final.xlsx   # required dataset for Candidate Elimination
 │── requirements.txt
 │── README.md
 ```
@@ -36,11 +38,34 @@ machine-learning-fundamentals/
 
 ### Candidate Elimination Algorithm
 
-Learns hypotheses consistent with training data using version space (specific & general boundaries).
+Implements the Candidate Elimination algorithm to learn hypotheses consistent with training data using version spaces.
+
+#### Dataset Requirement
+
+This notebook requires the following dataset:
+
+* File: `books_data-Final.xlsx`
+* Format: Excel file (.xlsx)
+* Columns expected:
+
+  * Title
+  * Author
+  * Year
+  * Language (target label)
+
+#### Note
+
+* The model treats **"English"** as the positive class label
+* Other languages are treated as negative examples
+* The dataset is loaded using pandas `read_excel()`
+
+---
 
 ### K-Means Clustering
 
-Unsupervised learning algorithm for grouping data into k clusters.
+Unsupervised learning algorithm used to group data into k clusters based on feature similarity.
+
+---
 
 ### Hierarchical Clustering
 
@@ -52,9 +77,29 @@ Agglomerative clustering using linkage methods with dendrogram visualization.
 
 * Python
 * Jupyter Notebook
+* pandas
+* numpy
 * scikit-learn
 * matplotlib
 * scipy
+
+---
+
+## Dataset Setup (IMPORTANT)
+
+Before running the notebooks:
+
+1. Place the dataset inside the `data/` folder:
+
+   ```plaintext id="dataset1"
+   data/books_data-Final.xlsx
+   ```
+
+2. Ensure the file path in the notebook matches:
+
+   ```python id="path1"
+   file_path = "data/books_data-Final.xlsx"
+   ```
 
 ---
 
@@ -72,4 +117,4 @@ Agglomerative clustering using linkage methods with dendrogram visualization.
    jupyter notebook
    ```
 
-3. Open notebooks inside the `notebooks/` folder
+3. Open notebooks from the `notebooks/` folder
