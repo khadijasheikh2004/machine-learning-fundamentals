@@ -1,60 +1,75 @@
-# Machine Learning Projects 
+# Machine Learning Fundamentals (Python + Jupyter Notebooks)
 
-This repository contains a collection of machine learning projects covering core concepts such as web data extraction, concept learning, clustering techniques, and binary text classification. Each project is implemented in Python using libraries like `scikit-learn`, `matplotlib`, and `pandas`.
+## Overview
 
----
+This repository contains implementations of fundamental machine learning algorithms and concepts using Python and Jupyter Notebooks.
 
-## Project List
-
-### Web Scraping
-Extracts and processes textual content from web pages to prepare datasets for machine learning models. This project demonstrates how to collect unstructured data and clean it for downstream analysis.
-
-- **Tech stack:** `BeautifulSoup`, `requests`, `pandas`
-- **Key tasks:** HTML parsing, content filtering, text cleaning
+Each notebook focuses on understanding the working of core ML techniques.
 
 ---
 
-### Candidate Elimination Method
-Implements the **Candidate Elimination Algorithm** to learn hypotheses consistent with training data. This project illustrates concept learning using version spaces (specific and general boundaries).
+## Why I Built This
 
-- **Tech stack:** Python 
-- **Key concept:** Consistent hypothesis space generation from labeled examples
+I created this repository to:
+
+* Strengthen understanding of ML fundamentals
+* Implement algorithms from scratch or using scikit-learn
+* Visualize how models behave on data
 
 ---
+
+## Project Structure
+
+```
+machine-learning-fundamentals/
+│── notebooks/
+│     ├── candidate_elimination.ipynb
+│     ├── kmeans_clustering.ipynb
+│     ├── hierarchical_clustering.ipynb
+│── requirements.txt
+│── README.md
+```
+
+---
+
+## Projects Included
+
+### Candidate Elimination Algorithm
+
+Learns hypotheses consistent with training data using version space (specific & general boundaries).
 
 ### K-Means Clustering
-Performs unsupervised clustering using the K-Means algorithm. The project explores how data points are grouped into `k` clusters based on feature similarity, and visualizes the results.
 
-- **Tech stack:** `scikit-learn`, `matplotlib`
-- **Highlights:** Centroid initialization, cluster iteration, elbow method visualization
-
----
+Unsupervised learning algorithm for grouping data into k clusters.
 
 ### Hierarchical Clustering
-Applies **Agglomerative Hierarchical Clustering** using both **single** and **complete** linkage methods. Dendrograms are used to visualize cluster formation at different distance thresholds.
 
-- **Tech stack:** `scipy`, `matplotlib`
-- **Input:** Condensed pairwise distance matrix
-- **Output:** Dendrograms with labeled data points
+Agglomerative clustering using linkage methods with dendrogram visualization.
 
 ---
 
-### Real vs. Fake News Classification
-Classifies news articles as real or fake using supervised learning models. The dataset includes pre-labeled real and fake news articles. Text data is vectorized and evaluated using multiple ML algorithms.
+## Tech Stack
 
-- **Preprocessing:** TF-IDF vectorization, label encoding, PCA (2 components)
-- **Models Used:** 
-  - Gaussian, Multinomial & Bernoulli Naïve Bayes  
-  - Neural Network (with grid search optimization)  
-  - SVM (linear and RBF kernels)
-- **Evaluation Methods:**
-  - 70/30 Train-Test (Random & Stratified)
-  - 10-Fold Cross-Validation
-  - Accuracy & F1 Score
+* Python
+* Jupyter Notebook
+* scikit-learn
+* matplotlib
+* scipy
 
 ---
 
-## Requirements
+## How to Run
 
-```bash
-pip install numpy pandas matplotlib scikit-learn scipy beautifulsoup4 requests
+1. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Launch Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+3. Open notebooks inside the `notebooks/` folder
